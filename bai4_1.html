@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li,h1,h2{
+            color: white;
+        }
+        #container{
+            width: 100vw;
+            height: 100vh;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSw3qKutDvcUdUijbzL4PN8t219avsRXV1Pg&usqp=CAU");
+            background-size: contain;
+        }
+        #nav{
+            height: 10%;
+            display: flex;
+        }
+        #logo{
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.4em;
+        }
+        #menu{
+            width: 80%;
+        }
+        #menu ul{
+            box-sizing: border-box;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            height: 100%;
+            margin: 0;
+        }
+        #menu ul li{
+            margin-left: 15px;
+            list-style: none;
+            height: 100%;
+            width: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /*=============================*/
+        #contents{
+            height: 80%;
+            margin-top: 20px;
+            display: flex;
+        }
+        #verticalNav{
+            width: 20%;
+        }
+            #verticalNav ul{
+                width: 100%;
+                height: 100%;
+            }
+            #verticalNav ul li{
+                width: 80%;
+                height: 20px;
+                margin-top: 5px;
+                list-style-type: none;
+            }
+        #mainContent{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+          
+            flex-wrap: wrap;
+        }
+        .tag{
+            width: 30%;
+            aspect-ratio: 1.4;
+            margin: 7px 7px 7px 0;
+            background-color: white;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .tag h1{
+            height: 10%;
+            font-size: 0.7em;
+            margin: 0;
+            padding: 0;
+         
+            width: 100%;
+            
+        }
+        .tag h2{
+            font-size: 0.7em;
+            height: 15%;
+            margin: 0;
+            padding: 0;
+          
+            width: 100%;
+        }
+        .tag img{
+            width: 100%;
+            height: 75%;
+        }
+
+
+        #footer{
+            height: 10%;
+    
+            display: flex;
+        }
+        #licence{
+            width: 20%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #contact{
+            width: 80%;
+            height: 100%;
+        }
+        #contact ul{
+            width: 80%;
+            height: 100%;
+            display: flex;
+        }
+        #contact ul li{
+            margin-left: 10px;
+            list-style-type: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="nav">
+            <div id="logo">LoGo</div>
+            <div id="menu">
+                <ul>
+                    <li>About</li>
+                    <li>Sign Up</li>
+                    <li>Sign In</li>
+                </ul>
+            </div>
+        </div>
+        <div id="contents">
+            <div id="verticalNav">
+                <ul>
+                    <li>Home</li>
+                    <li>Table gallery</li>
+                    <li>Create Tab</li>
+                    <li>Favorite</li>
+                    <li>Tech News</li>
+                    <li>Travel</li>
+                    <li>Photography</li>
+                    <li>Finacer World</li>
+                    <li>Movies</li>
+                    <li>Cooking</li>
+                    <li>Fashion</li>
+                </ul>
+            </div>
+            <div id="mainContent">
+                <div class="tag">
+                    <h1>Tech News</h1>
+                    <img src="ip15.jpeg" alt="">
+                    <h2>Zent Goup</h2>
+                </div>
+                <div class="tag">
+                    <h1>Travel</h1>
+                    <img src="ip15.jpeg" alt="">
+                    <h2>Do you best,</h2>
+                </div>
+                <div class="tag">
+                    <h1>Photography</h1>
+                    <img src="ip15.jpeg" alt="">
+                    <h2>Take a shot! A pulizer price</h2>
+                </div>
+                <div class="tag">
+                    <h1>Finace world</h1>
+                    <img src="ip15.jpeg" alt="">
+                    <h2>Wao pls changer it !</h2>
+                </div>
+                <div class="tag">
+                    <h1>Movies</h1>
+                    <img src="ip15.jpeg" alt="">
+                    <h2>bat man the risShink</h2>
+                </div>
+                <div class="tag">
+                    <h1>Cooking </h1>
+                    <img src="ip15.jpeg" alt="">
+                    <h2>how to cook</h2>
+                </div>
+                <div class="tag">
+                    <h1>Fashion</h1>
+                    <img src="ip15.jpeg" alt="">
+                    <h2>gi do </h2>
+                </div>
+                
+            </div>
+        </div>
+        <div id="footer">
+            <div id="licence">ban quyen thuoc ve zent</div>
+            <div id="contact">
+                <ul>
+                    <li><a href="">About</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Mac App</a></li>
+                    <li><a href="">Ipad App</a></li>
+                    <li><a href="">Team of User</a></li>
+                    <li><a href="">Pivate Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
