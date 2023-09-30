@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+td:nth-child(3) {
+    color: red;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <td>Họ và tên:</td>
+                <td><input type="text" name="fullname" id="fullname"></td>
+                <td><span class="error" id="fullname-error"></span></td>
+            </tr>
+            <tr>
+                <td>Giới tính:</td>
+                <td>
+                    <input name="sex" type="radio" value="male" id="male">
+                    <label for="male">Nam</label>
+                    <input name="sex" type="radio" value="female" id="female">
+                    <label for="female">Nữ</label>
+                </td>
+                <td><span class="error" id="sex-error"></span></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="email" id="email" required></td>
+                <td><span class="error" id="email-error"></span></td>
+            </tr>
+            <tr>
+                <td>Số điện thoại:</td>
+                <td><input type="tel" name="phone" id="phone"></td>
+                <td><span class="error" id="phone-error"></span></td>
+            </tr>
+            <tr>
+                <td>Mật khẩu:</td>
+                <td><input type="password" name="password" id="password"></td>
+                <td><span class="error" id="password-error"></span></td>
+            </tr>
+            <tr>
+                <td>Xác nhận mật khẩu:</td>
+                <td><input type="password" name="confirm_password" id="confirm_password"></td>
+                <td><span class="error" id="confirm_password-error"></span></td>
+            </tr>
+        </table>
+        <div class="clean">
+            <button id="signup">Đăng ký</button>
+            <button id="clean">Xóa trống</button>
+        </div>
+    </div>
+    <script>
+
+    const fullnameInput = document.getElementById('fullname');
+    const sexInput = document.querySelector('input[name="sex"]');
+    const emailInput = document.getElementById('email');
+    const phoneInput = document.getElementById('phone');
+    const passwordInput = document.getElementById('password');
+    const confirmPasswordInput = document.getElementById('confirm_password');
+    const signupButton = document.getElementById('signup');
+    const cleanButton = document.getElementById('clean');
+
+    const fullnameError = document.getElementById('fullname-error');
+    const sexError = document.getElementById('sex-error');
+    const emailError = document.getElementById('email-error');
+    const phoneError = document.getElementById('phone-error');
+    const passwordError = document.getElementById('password-error');
+    const confirmPasswordError = document.getElementById('confirm_password-error');
+
+    signupButton.addEventListener('click', function () {
+        let valid = true;
+        if (fullnameInput.value.length < 8) {
+            valid = false;
+            fullnameError.textContent = 'Họ và Tên phải có ít nhất 8 ký tự';
+        }
+        if (!sexInput.checked) {
+            valid = false;
+            sexError.textContent = 'Vui lòng chọn giới tính';
+        }
+
+        if (!validateEmail(emailInput.value)) {
+            valid = false;
+            emailError.textContent = 'Email không hợp lệ';
+        }
+
+        if (phoneInput.value !== '' && !isVietnamesePhoneNumber(phoneInput.value)) {
+            valid = false;
+            phoneError.textContent = 'Số điện thoại không hợp lệ';
+        }
+
+        if (passwordInput.value.length < 8) {
+            valid = false;
+            passwordError.textContent = 'Mật khẩu phải có ít nhất 8 ký tự';
+        }
+
+        if (passwordInput.value !== confirmPasswordInput.value) {
+            valid = false;
+            confirmPasswordError.textContent = 'Xác nhận mật khẩu không khớp';
+        }
+
+        if (valid) {
+            alert('Đăng ký thành công!');
+        }
+    });
+
+    cleanButton.addEventListener('click', function () {
+        clearErrors();
+    });
+
+    function clearErrors() {
+        fullnameError.textContent = '';
+        sexError.textContent = '';
+        emailError.textContent = '';
+        phoneError.textContent = '';
+        passwordError.textContent = '';
+        confirmPasswordError.textContent = '';
+    }
+;
+
+    </script>
+</body>
+</html>

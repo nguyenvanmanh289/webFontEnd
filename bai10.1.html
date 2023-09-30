@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="quantity"></h1>
+    <p id="screen"></p>
+    <script>
+        let count=0;
+        const screen = document.getElementById("screen");
+        const quantity = document.getElementById("quantity");
+        let result="";
+        for(let i=0;i<100;i++){
+            if(i%3==0 || i%7==0){
+                count++;
+                if(count%10==0){
+                    result+=i.toString()+" "+"<br>";
+                }
+                else{
+                    result+=i.toString()+" ";
+                }
+                
+            }
+        }
+
+        quantity.innerText = "số lượng số chia hết cho 3 or 7 là: "+count;
+        screen.innerHTML = "danh sách các số đó là: <br>"+result;
+    </script>
+</body>
+</html>

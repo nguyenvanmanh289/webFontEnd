@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            cursor: pointer;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slideshow-container">
+        <div class="slide">
+            <img src="https://photographylife.com/wp-content/uploads/2017/07/Hasselblad-X1D-50c-Image-Sample-10.jpg"
+                alt="Image 1">
+        </div>
+        <div class="slide">
+            <img src="https://3.bp.blogspot.com/-pe34D2pEWu8/XAC9bbC_H2I/AAAAAAAAZ9g/-AZVDjz3zp87fPN0PkD47HEItdJFV4CNACLcBGAs/s1600/20Photo0101_1.jpg"
+                alt="Image 2">
+        </div>
+        <div class="slide">
+            <img src="https://4.bp.blogspot.com/-LmkOPzEPMC8/XADhoG8A0xI/AAAAAAAAZ-Y/bBeXDjFkHwMCskrFW1vIQ2nTyWKA9Ob-gCLcBGAs/s1600/22Photo0099_1.jpg"
+                alt="Image 3">
+        </div>
+        <div class="slide">
+            <img src="https://1.bp.blogspot.com/-jG0JKsi41w8/XAC2RMbUe3I/AAAAAAAAZ88/KGlkcW_eLlMi1ucV8oyMTa2mRUhMAoaygCLcBGAs/s1600/17Photo0095_1.jpg"
+                alt="Image 4">
+        </div>
+        <button class="prev" onclick="plusSlides(-1)">prev</button>
+        <button class="next" onclick="plusSlides(1)">next</button>
+    </div>
+    <div class="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+    <script>
+        let slideIndex = 0;
+
+        function showSlides() {
+            let slides = document.querySelectorAll('.slide');
+            let dots = document.querySelectorAll('.dot');
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(' active', '');
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = 'block';
+            dots[slideIndex - 1].className += ' active';
+            setTimeout(showSlides, 5000); // Chuyển tự động sau 5 giây
+        }
+
+        function plusSlides(n) {
+            showSlides((slideIndex += n));
+        }
+
+        function currentSlide(n) {
+            showSlides((slideIndex = n));
+        }
+
+        showSlides();
+
+
+    </script>
+</body>
+
+</html>
