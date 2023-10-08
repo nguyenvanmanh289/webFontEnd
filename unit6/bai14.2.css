@@ -1,0 +1,29 @@
+h1{
+    color: greenyellow;
+}
+p{
+    color: wheat;
+}
+.container{
+    height: 100vh;
+    background-color: black
+}
+hr{
+   border-color: black;
+}
+.accordion{
+    background-image: linear-gradient(rgb(75, 75, 75),rgb(32, 31, 31))
+}
+header{
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.content{ 
+    height: 100px;
+}
+
+.content p{
+    margin: 0;
+    font-size: .8em;
+}
