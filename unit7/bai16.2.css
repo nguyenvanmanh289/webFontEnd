@@ -1,0 +1,337 @@
+@media screen and (min-width:900px) {
+    
+.container{
+    width: 100vw;
+    height: 100vh;
+}
+#mask{
+    display: none;
+}
+header{
+    height: 10%;
+    background-color: orange;
+    display: flex;
+    justify-content: space-between;
+}
+#logo{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header >h1{
+    display: none;
+}
+header >ul{
+    display: flex;
+    width: 40%;
+    align-items: center;
+}
+#banner{
+    display: none;
+}
+
+header ul h1{
+    display: none;
+}
+header ul li{
+    margin-left: 20px;
+    list-style-type: none;
+    position: relative;
+}
+header ul li:hover ul{
+    display: block;
+}
+
+header ul li ul{
+    position: absolute;
+    display: none;
+    background-color: white;
+    width: 100px;
+    margin: 0;
+    padding: 0;
+}
+header ul li ul li{
+ margin: 0;
+ margin-top: 15px;
+}
+
+/*================section*/
+section{
+    height: 80%;
+    background-color: orange;
+    display: flex;
+    justify-content: center;align-items: center;
+}
+#wrap-content{
+    width: 70%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+#wrap-content h1{
+    width: 100%;
+    text-align: center;
+}
+#wrap-content p{
+    width: 100%;
+    text-align: center;
+}
+#wrap-content button{
+    width: 100px;
+    height: 30px;
+    text-align: center;
+}
+
+}
+
+@media screen and (max-width:900px) and (min-width:650px) {
+    .container{
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+    }
+    #mask{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: .5;
+    }
+
+    header{
+        height: 10%;
+        background-color: orange;
+        display: flex;
+        justify-content: space-between;
+        transition: all .4s linear;
+    }
+    #logo{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    header >ul{
+        margin: 0;
+        width: 40%;
+        position: relative;
+        width: 70%;
+        height: 100vh;
+        background-color: red;
+        padding: 0;
+        
+    }
+
+    #menu{
+        width: 30%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        align-items: center;
+    }
+    #nav >li:nth-of-type(1) {
+        margin-top: 200px;
+    }
+    header >ul h1{
+        display: block;
+        position: absolute; 
+        top: 15px;
+        left: 10px;
+        margin: 0;
+        width: 50px;
+        height: 50px;
+        z-index: 1;
+    }
+    
+    #banner{
+        top :10px;
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+    }h2{
+            width: 100%;
+            text-align: center;
+        }
+    #banner img{
+        height: 100%;
+        aspect-ratio: 1;
+    }
+    header ul li ul li{
+        height: 20px;
+        margin: 0;
+       
+    }
+    header ul>li{
+        margin-left: 20px;
+        list-style-type: none;
+        width: 90%;
+        
+    }
+    
+
+ 
+    /*================section*/
+    section{
+        height: 80%;
+        background-color: orange;
+        display: flex;
+        justify-content: center;align-items: center;
+    }
+    #wrap-content{
+        width: 70%;
+        height: 70%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+    #wrap-content h1{
+        width: 100%;
+        text-align: center;
+    }
+    #wrap-content p{
+        width: 100%;
+        text-align: center;
+    }
+    #wrap-content button{
+        width: 100px;
+        height: 30px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .container{
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+    }
+    #mask{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: .5;
+    }
+
+    header{
+        height: 10%;
+        background-color: orange;
+        display: flex;
+        justify-content: space-between;
+        transition: all .4s linear;
+    }
+    #logo{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    header >ul{
+        margin: 0;
+        width: 40%;
+        position: relative;
+        width: 70%;
+        height: 100vh;
+        background-color: red;
+        padding: 0;
+        
+    }
+
+    #menu{
+        width: 30%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        align-items: center;
+    }
+    #nav >li:nth-of-type(1) {
+        margin-top: 200px;
+    }
+    header >ul h1{
+        display: block;
+        position: absolute; 
+        top: 15px;
+        left: 10px;
+        margin: 0;
+        width: 50px;
+        height: 50px;
+        z-index: 1;
+    }
+    
+    #banner{
+        top :10px;
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+    }h2{
+            width: 100%;
+            text-align: center;
+        }
+    #banner img{
+        height: 100%;
+        aspect-ratio: 1;
+    }
+
+    header ul li ul{
+        display: none;
+    }
+    header ul li ul li{
+        height: 20px;
+        margin: 0;
+       
+    }
+    header ul>li{
+        margin-left: 20px;
+        list-style-type: none;
+        width: 90%;
+        
+    }
+    
+
+ 
+    /*================section*/
+    section{
+        height: 80%;
+        background-color: orange;
+        display: flex;
+        justify-content: center;align-items: center;
+    }
+    #wrap-content{
+        width: 70%;
+        height: 70%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+    #wrap-content h1{
+        width: 100%;
+        text-align: center;
+    }
+    #wrap-content p{
+        width: 100%;
+        text-align: center;
+    }
+    #wrap-content button{
+        width: 100px;
+        height: 30px;
+        text-align: center;
+    }
+}
