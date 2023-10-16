@@ -1,0 +1,16 @@
+header{
+    width: 100%;
+
+}
+
+/*overright bootstrap css*/
+.nav-item{
+    margin-left: 20px;
+    font-weight: 500;
+}
+.nav-item:hover a{
+    color: rgb(126,187,159);
+}
+.navbar-brand{
+    font-weight: 700;
+}
